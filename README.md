@@ -1,16 +1,64 @@
-# React + Vite
+# Contador Consciente — React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um exercício introdutório em **React** com foco em **componentização consciente**, **estado** e **fluxo de dados unidirecional**.
 
-Currently, two official plugins are available:
+A aplicação consiste em um contador simples, com ações de incrementar, decrementar e resetar o valor exibido na tela.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Objetivos do exercício
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Compreender o uso do hook `useState`
+* Praticar separação de responsabilidades entre componentes
+* Trabalhar com `props` e `children`
+* Criar componentes reutilizáveis
+* Aplicar estilização com Tailwind CSS
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Conceitos aplicados
+
+* **Estado centralizado** no componente `App`
+* **Atualização funcional de estado** (`setState(prev => ...)`)
+* **Componentização** orientada à responsabilidade única
+* **Composição com `children`**
+* **Reutilização de UI** com um componente `Button`
+* **Fluxo de dados top-down** (pai → filhos)
+
+---
+
+## Estrutura dos componentes
+
+* **App**
+
+  * Responsável pelo estado (`count`) e pela lógica de negócio
+* **Container**
+
+  * Componente de layout responsável por centralizar o conteúdo
+* **Counter**
+
+  * Responsável apenas por exibir o valor do contador
+* **Control**
+
+  * Agrupa os botões de ação e recebe handlers via props
+* **Button**
+
+  * Componente reutilizável de botão estilizado com Tailwind
+
+---
+
+## Funcionalidades
+
+* Incrementar o contador em +1
+* Decrementar o contador em -1
+* Resetar o contador para 0
+
+---
+
+## Tecnologias utilizadas
+
+* React
+* JavaScript (ES6+)
+* Tailwind CSS
+
+---
