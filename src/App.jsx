@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Container from "./components/Container";
 import Counter from "./components/Counter";
@@ -18,6 +18,10 @@ function App() {
   const handleReset = () => {
     setCount(() => 0)
   }
+
+  useEffect(() => {
+    document.title = `Count: ${count}`
+  }, [count])
 
   return (
     <Container>
